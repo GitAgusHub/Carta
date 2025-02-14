@@ -50,32 +50,45 @@ body {
         transform: translateY(0);
         display: block;
         }
+        .imagenes {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+         margin-bottom: -50px; /* Ajusta si es necesario */
+            }
         /* Ocultar imágenes hasta que aparezca la carta */
         .carta .img-esquina {
         max-width: 100%;  /* La imagen nunca será más grande que la pantalla */
         height: auto;     /* Mantiene la proporción */
         position: absolute;
         width: 120px;     /* Ajustá el tamaño según necesidad */
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         }
         .carta.mostrar .img-esquina {
         display: block;
         }
+       
 
         .img-esquina-izq {
-        top: 10px;
-        left: 10px;
+        left: 5%
+        
         }
        .img-esquina-der {
-        top: 10px;
-        right: 10px;
+        right: 5%;
         }
 
         /* 📱 Ajustes para celulares */
         @media screen and (max-width: 600px) { 
         .img-esquina {
         width: 80px;   /* Reduce el tamaño en pantallas pequeñas */
-         }
+            }
         }
+
 
 }
 
