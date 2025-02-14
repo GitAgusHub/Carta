@@ -55,13 +55,19 @@
         corazon.classList.add("corazon");
         corazon.innerHTML = "💖"; // Puedes cambiar el emoji por otro
         document.getElementById("corazones").appendChild(corazon);
-
+        // Posición aleatoria mejorada para pantallas chicas
+        let leftPos = Math.random() * window.innerWidth * 0.9; 
+        corazon.style.left = leftPos + "px";
+        corazon.style.top = window.innerHeight + "px"; 
+        corazon.style.fontSize = Math.random() * 20 + 20 + "px"; 
+        corazon.style.animationDuration = Math.random() * 2 + 3 + "s";
+            /*
         // Posición aleatoria
         corazon.style.left = Math.random() * window.innerWidth + "px";
         corazon.style.top = window.innerHeight + "px"; // Comienza desde abajo
         corazon.style.fontSize = Math.random() * 20 + 20 + "px"; // Tamaño aleatorio
         corazon.style.animationDuration = Math.random() * 2 + 3 + "s"; // Entre 3 y 5 segundos
-
+    */
 
         // Eliminar el corazón después de la animación
         setTimeout(() => {
