@@ -1,4 +1,5 @@
 
+
 body {
             text-align: center;
             font-family: 'Arial', sans-serif;
@@ -11,7 +12,7 @@ body {
             margin-top: 20px;
         }
         button {
-            font-size: 18px;
+            font-size: 18px;    
             padding: 10px 20px;
             margin: 10px;
             border: none;
@@ -56,7 +57,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-         margin-bottom: -50px; /* Ajusta si es necesario */
+         margin-bottom: -30px; /* Ajusta si es necesario */
             }
         /* Ocultar imágenes hasta que aparezca la carta */
         .img-esquina {  
@@ -68,19 +69,25 @@ body {
             }
 
             .img-esquina-izq {
-                left: 0;
+                left: 5%;
             }
 
             .img-esquina-der {
-                right: 0;
+                right: 5%;
             }
 
         /* 📱 Ajustes para celulares */
         @media screen and (max-width: 600px) { 
+         .imagenes {
+            flex-direction: row; /* Asegura que sigan alineadas horizontalmente */
+            justify-content: space-around; /* Se ajustan mejor en la pantalla */
+        }
+
         .img-esquina {
-            width: 80px; /* Reduce el tamaño en pantallas pequeñas */
-            display: block; /* Asegura que las imágenes se acomoden una debajo de la otra si es necesario */
-            margin: 10px auto; /* Centra las imágenes */
+             width: 80px; /* Reduce el tamaño en pantallas pequeñas */
+            position: static; /* Evita problemas con absolute en móviles */
+            transform: none;
+            margin: 10px;
             }
         }
 }
