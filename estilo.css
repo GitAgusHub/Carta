@@ -1,4 +1,5 @@
 
+
 body {
             text-align: center;
             font-family: 'Arial', sans-serif;
@@ -78,19 +79,44 @@ body {
         /* 📱 Ajustes para celulares */
         @media screen and (max-width: 600px) { 
          .imagenes {
-            flex-direction: column; /* Asegura que sigan alineadas horizontalmente */
+            flex-direction: row; /* Asegura que sigan alineadas horizontalmente */
             justify-content: space-around; /* Se ajustan mejor en la pantalla */
-            align-items: center;
-         }
+        }
 
         .img-esquina {
-            width: 80%; /* Ajusta el tamaño para que no sean muy grandes */
-            max-width: 250px; /* Evita que crezcan demasiado */
-            position: static;
+             width: 80px; /* Reduce el tamaño en pantallas pequeñas */
+            position: static; /* Evita problemas con absolute en móviles */
             transform: none;
-            margin-bottom: 15px; /* Espacio entre imágenes */
+            margin: 10px;
             }
         }
+        #corazones {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Para que no interfiera con los clics */
+        overflow: hidden;
+        }
+
+        .corazon {
+        position: absolute;
+        font-size: 24px;
+        animation: flotar 5s linear infinite;
+        }
+
+        @keyframes flotar {
+        0% {
+          transform: translateY(0) scale(1);
+            opacity: 1;
+        }   
+        100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+        }
+    }
+
 }
 
 
