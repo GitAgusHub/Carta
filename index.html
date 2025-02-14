@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="imagenes">
-        <img src="img/Imagen de WhatsApp 2025-02-14 a las 11.06.22_ddcae0f1.jpg" class="img-esquina img-esquina-izq">
+        <img src="img/imagen1.jpg" class="img-esquina img-esquina-izq">
         <img src="img/IMG-20250214-WA0014.jpg" class="img-esquina img-esquina-der">
     </div>
     <div class="carta" id="carta">
@@ -55,8 +55,11 @@
         document.getElementById("corazones").appendChild(corazon);
 
         // Posición aleatoria
-        corazon.style.left = Math.random() * 100 + "vw";
-        corazon.style.animationDuration = Math.random() * 2 + 3 + "s"; // De 3 a 5 segundos
+        corazon.style.left = Math.random() * window.innerWidth + "px";
+        corazon.style.top = window.innerHeight + "px"; // Comienza desde abajo
+        corazon.style.fontSize = Math.random() * 20 + 20 + "px"; // Tamaño aleatorio
+        corazon.style.animationDuration = Math.random() * 2 + 3 + "s"; // Entre 3 y 5 segundos
+
 
         // Eliminar el corazón después de la animación
         setTimeout(() => {
