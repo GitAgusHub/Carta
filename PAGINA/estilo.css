@@ -1,5 +1,4 @@
 
-
 body {
             text-align: center;
             font-family: 'Arial', sans-serif;
@@ -79,78 +78,17 @@ body {
         /* 📱 Ajustes para celulares */
         @media screen and (max-width: 600px) { 
          .imagenes {
-            flex-direction: row; /* Asegura que sigan alineadas horizontalmente */
+            flex-direction: column; /* Asegura que sigan alineadas horizontalmente */
             justify-content: space-around; /* Se ajustan mejor en la pantalla */
-        }
+            align-items: center;
+         }
 
         .img-esquina {
-             width: 80px; /* Reduce el tamaño en pantallas pequeñas */
-            position: static; /* Evita problemas con absolute en móviles */
+            width: 80%; /* Ajusta el tamaño para que no sean muy grandes */
+            max-width: 250px; /* Evita que crezcan demasiado */
+            position: static;
             transform: none;
-            margin: 10px;
+            margin-bottom: 15px; /* Espacio entre imágenes */
             }
         }
 }
-
-
-
-/*body {
-    background-color: #ffe6e6;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.carta {
-    background: #fff;
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    text-align: center;
-    border: 2px solid #ff6699;
-}
-
-.carta h1 {
-    color: #ff3366;
-    font-size: 24px;
-}
-
-.carta p {
-    font-size: 16px;
-    color: #444;
-    margin: 10px 0;
-}
-
-.firma {
-    margin-top: 15px;
-    font-style: italic;
-    font-weight: bold;
-    color: #ff3366;
-}
-
-/* Decoraciones de corazones 
-body::before {
-    content: "💖 💕 💘 💝 💞 💗 💓";
-    font-size: 30px;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-body::after {
-    content: "💓 💗 💞 💝 💘 💕 💖";
-    font-size: 30px;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}*/
