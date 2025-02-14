@@ -78,15 +78,17 @@ body {
         /* 📱 Ajustes para celulares */
         @media screen and (max-width: 600px) { 
          .imagenes {
-            flex-direction: row; /* Asegura que sigan alineadas horizontalmente */
-            justify-content: space-around; /* Se ajustan mejor en la pantalla */
+            flex-direction: row; /* Mantiene la alineación horizontal */
+            justify-content: space-around;
+            align-items: center;
         }
 
         .img-esquina {
-             width: 80px; /* Reduce el tamaño en pantallas pequeñas */
-            position: static; /* Evita problemas con absolute en móviles */
+             width: 70px; /* Reduce más el tamaño */
+             max-width: 30%; /* Se adapta mejor en pantallas chicas */
+            position: static; /* Evita desplazamientos extraños */
             transform: none;
-            margin: 10px;
+            margin: 5px;
             }
         }
         #corazones {
