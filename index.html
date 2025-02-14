@@ -16,17 +16,16 @@
         </div>
     </div>
     <div class="imagenes">
-        <img src="PAGINA/img/imagen1.jpg" class="img-esquina img-esquina-izq">
-        <img src="PAGINA/img/IMG-20250214-WA0014.jpg" class="img-esquina img-esquina-der">
+        <img src="img/Imagen de WhatsApp 2025-02-14 a las 11.06.22_ddcae0f1.jpg" class="img-esquina img-esquina-izq">
+        <img src="img/IMG-20250214-WA0014.jpg" class="img-esquina img-esquina-der">
     </div>
     <div class="carta" id="carta">
         
         <h1>Para mi Amor    💖</h1>
         <p>
-            Bueno amor, en este día especial, quiero recordarte lo increíble que sos y lo mucho que significas para mí. 
-            Me pone re feliz que hayamos llegado a este día, sos mi persona especial, mi razón para sonreír cada día. 
-            No hay palabras suficientes para expresar cuánto te amo, pero espero que este pequeño regalito logre transmitirte al menos una parte de mis sentimientos. 💕    
-            La verdad que queria que esto quede lo mas lindo y especial, pero la verdad que se complico bastante terminar esto, asi que logre esto, espero que te guste🥰.
+            En este día especial, quiero recordarte lo increíble que sos y lo mucho que significas para mí. 
+            Me pone re feliz que haya llegado a este día con vos, sos mi persona especial, mi razón para sonreír cada día. 
+            No hay palabras suficientes para expresar cuánto te amo, pero espero que esta pequeña carta logre transmitirte al menos una parte de mis sentimientos. 💕    
             La primera vez que te dedique una cancion, me senti raro, nunca lo hice, pero elegí el tema que es perfecto para vos, cada vez que la escucho, pienso en vos.
             <button onclick="window.location.href='https://open.spotify.com/intl-es/track/4om2gLDSF7vv9DBl8p1qhn';">Perfecta</button>
         </p>
@@ -34,6 +33,7 @@
         <div class="firma">TE AMA MUCHO, TU NOVIO Agus</div>
 
     </div>
+    <div id="corazones"></div>
 
 
     <script>
@@ -48,6 +48,24 @@
         document.getElementById("btnNo").addEventListener("click", function() {
             alert("FA LOCA, ASI SOS E, TODO MAL 💔");
         });
+        function crearCorazon() {
+        const corazon = document.createElement("div");
+        corazon.classList.add("corazon");
+        corazon.innerHTML = "💖"; // Puedes cambiar el emoji por otro
+        document.getElementById("corazones").appendChild(corazon);
+
+        // Posición aleatoria
+        corazon.style.left = Math.random() * 100 + "vw";
+        corazon.style.animationDuration = Math.random() * 2 + 3 + "s"; // De 3 a 5 segundos
+
+        // Eliminar el corazón después de la animación
+        setTimeout(() => {
+            corazon.remove();
+        }, 5000);
+    }
+
+    // Generar corazones cada 500ms
+    setInterval(crearCorazon, 500);
     </script>
 </body>
 </html>
