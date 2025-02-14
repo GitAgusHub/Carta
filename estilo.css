@@ -56,14 +56,14 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-         margin-bottom: -30px; /* Ajusta si es necesario */
+         margin-bottom: -50px; /* Ajusta si es necesario */
             }
         /* Ocultar imágenes hasta que aparezca la carta */
         .img-esquina {
                 width: 120px;
                 height: auto;
                 position: absolute;
-                top: 50%;
+                top: 0;
                 transform: translateY(-50%);
             }
 
