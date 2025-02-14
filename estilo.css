@@ -64,7 +64,7 @@ body {
                 height: auto;
                 position: absolute;
                 top: 0;
-                transform: translateY(-50%);
+                transform: translateY(50%);
             }
 
             .img-esquina-izq {
