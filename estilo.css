@@ -1,4 +1,3 @@
-
 body {
             text-align: center;
             font-family: 'Arial', sans-serif;
@@ -59,31 +58,32 @@ body {
          margin-bottom: -50px; /* Ajusta si es necesario */
             }
         /* Ocultar imágenes hasta que aparezca la carta */
-        .img-esquina {
+        .img-esquina {  
                 width: 120px;
                 height: auto;
-                position: absolute;
-                top: 0;
+                position: relative;
                 transform: translateY(50%);
+                margin: 10px;
             }
 
             .img-esquina-izq {
-                left: 5%;
+                left: 0;
             }
 
             .img-esquina-der {
-                right: 5%;
+                right: 0;
             }
 
         /* 📱 Ajustes para celulares */
         @media screen and (max-width: 600px) { 
         .img-esquina {
-        width: 80px;   /* Reduce el tamaño en pantallas pequeñas */
+            width: 80px; /* Reduce el tamaño en pantallas pequeñas */
+            display: block; /* Asegura que las imágenes se acomoden una debajo de la otra si es necesario */
+            margin: 10px auto; /* Centra las imágenes */
             }
         }
-
-
 }
+
 
 
 /*body {
